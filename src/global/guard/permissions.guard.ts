@@ -1,6 +1,7 @@
-import { CanActivate, ExecutionContext, Injectable, Logger } from '@nestjs/common';
+import { CanActivate, ExecutionContext, ForbiddenException, Injectable, Logger } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { PERMISSIONS_KEY } from '../decorators/permissions.decorator';
+import { ErrorMessages } from '../errors/errors';
 
 @Injectable()
 export class PermissionsGuard implements CanActivate {
@@ -27,7 +28,7 @@ export class PermissionsGuard implements CanActivate {
 
     if (user.userType?.toLowerCase() !== 'cms') {
       this.logger.warn('Access denied: User is not a CMS user');
-      return false;
+      throw new ForbiddenException(ErrorMessages.UNAUTHORIZED);
     }
 
     if (user.permissions?.includes('*')) {
@@ -39,6 +40,7 @@ export class PermissionsGuard implements CanActivate {
 
     if (!hasPermissions) {
       this.logger.warn(`Access denied: Missing required permissions: ${requiredPermissions}`);
+      throw new ForbiddenException(ErrorMessages.UNAUTHORIZED);
     }
 
     return hasPermissions;

@@ -13,7 +13,10 @@ export class AuthService {
   ) {}
 
   async login(email: string, passwordOrPin: string) {
-    const user = await this.usersService.validateCredentials(email, passwordOrPin);
+    const user = await this.usersService.validateCredentials(
+      email,
+      passwordOrPin,
+    );
 
     if (!user) {
       throw new UnauthorizedException('Invalid credentials');
@@ -21,11 +24,9 @@ export class AuthService {
 
     const payload: JwtPayload = {
       _id: user._id,
-      email: user.email, 
+      email: user.email,
       userType: user.userType,
-     
     };
-    
 
     return {
       access_token: this.jwtService.sign(payload),
@@ -33,9 +34,14 @@ export class AuthService {
   }
 
   async cmsLogin(email: string, password: string) {
-    const cmsUser = await this.usersService.validateCmsCredentials(email, password);
+    const cmsUser = await this.usersService.validateCmsCredentials(
+      email,
+      password,
+    );
 
-    const cmsUserWithRole = await this.usersService.getCmsUserById(cmsUser._id.toString());
+    const cmsUserWithRole = await this.usersService.getCmsUserById(
+      cmsUser._id.toString(),
+    );
 
     const payload: JwtPayload = {
       _id: cmsUserWithRole._id,
@@ -49,5 +55,3 @@ export class AuthService {
     };
   }
 }
-
-

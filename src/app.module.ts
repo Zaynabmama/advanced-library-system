@@ -7,6 +7,7 @@ import { EmailService } from './global/services/email.service';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { JwtGuard } from './global/guard/jwt.guard';
 import { LoggingInterceptor } from './global/logging.interceptor';
+import { GlobalModule } from './global/global.module';
 
 @Module({
   imports: [
@@ -23,12 +24,12 @@ import { LoggingInterceptor } from './global/logging.interceptor';
         return { uri: dbUrl };
       },
     }),
+    GlobalModule,
     AuthModule,
     UsersModule,
    
   ],
   providers: [
-    EmailService,
     {
       provide: APP_GUARD,
       useClass: JwtGuard, 
@@ -38,6 +39,6 @@ import { LoggingInterceptor } from './global/logging.interceptor';
       useClass: LoggingInterceptor,
     },
   ],
-  exports: [EmailService],
+  //exports: [EmailService],
 })
 export class AppModule {}

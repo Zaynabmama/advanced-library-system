@@ -11,7 +11,6 @@ import { Member, MemberSchema } from './schemas/member.schema';
 import { Author, AuthorSchema } from './schemas/author.schema';
 import { Role, RoleSchema } from './schemas/role.schema';
 import { Otp, OtpSchema } from './schemas/otp.schema';
-import { EmailService } from 'src/global/services/email.service';
 import { PermissionsGuard } from 'src/global/guard/permissions.guard';
 
 @Module({
@@ -25,8 +24,21 @@ import { PermissionsGuard } from 'src/global/guard/permissions.guard';
     ]),
    
   ],
-  controllers: [CmsController, MembersController, AuthorsController],
-  providers: [UsersService, RoleService, OtpService, PermissionsGuard,EmailService],
-  exports: [UsersService, RoleService, OtpService,EmailService],
+  controllers: [
+    CmsController,
+    MembersController,
+    AuthorsController,
+  ],
+  providers: [
+    UsersService,
+    RoleService,
+    OtpService,
+    PermissionsGuard,
+  ],
+  exports: [
+    UsersService,
+    RoleService,
+    OtpService,
+  ],
 })
 export class UsersModule {}

@@ -5,5 +5,7 @@ export const ErrorMessages = {
     ROLE_NOT_FOUND: 'Role not found.',
     UNAUTHORIZED: 'You are not authorized to perform this action.',
     EMAIL_SEND_FAILED: 'Failed to send the email. Please try again later.',
+    FILE_NOT_PROVIDED:'No file provided for upload.',
+    FILE_NOT_UPLOADED:'No file uploaded.'
   };
   

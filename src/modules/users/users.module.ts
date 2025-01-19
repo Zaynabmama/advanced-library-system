@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CmsController } from './cms.controller';
-import { MembersController } from './members.controller';
-import { AuthorsController } from './authors.controller';
-import { UsersService } from './users.service';
-import { RoleService } from './role.service';
-import { OtpService } from './otp.service';
+import { CmsController } from './controllers/cms.controller';
+import { MembersController } from './controllers/members.controller';
+import { AuthorsController } from './controllers/authors.controller';
+import { UsersService } from './services/users.service';
+import { RoleService } from './services/role.service';
+import { OtpService } from './services/otp.service';
 import { CmsUser, CmsUserSchema } from './schemas/cms-user.schema';
 import { Member, MemberSchema } from './schemas/member.schema';
 import { Author, AuthorSchema } from './schemas/author.schema';

@@ -5,10 +5,10 @@ import { generate } from 'otp-generator';
   import * as bcrypt from 'bcrypt';
 import { Injectable, UnauthorizedException, NotFoundException } from '@nestjs/common';
 import { UserType } from 'src/global/enums';
-import { Author } from './schemas/author.schema';
-import { CmsUser } from './schemas/cms-user.schema';
-import { Member } from './schemas/member.schema';
-import { Role } from './schemas/role.schema';
+import { Author } from '../schemas/author.schema';
+import { CmsUser } from '../schemas/cms-user.schema';
+import { Member } from '../schemas/member.schema';
+import { Role } from '../schemas/role.schema';
 import { EmailService } from 'src/global/services/email.service';
 import { ErrorMessages } from 'src/global/errors/errors';
   

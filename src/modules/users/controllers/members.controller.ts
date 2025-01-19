@@ -1,9 +1,9 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { UsersService } from './users.service';
-import { OtpService } from './otp.service';
+import { UsersService } from '../services/users.service';
+import { OtpService } from '../services/otp.service';
 import { Messages } from 'src/global/message';
 import { Public } from 'src/global/decorators/public.decorator';
-import { CreateMemberDto } from './dto/create-member.dto';
+import { CreateMemberDto } from '../dto/create-member.dto';
 
 @Controller('members')
 export class MembersController {

@@ -1,10 +1,10 @@
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
-import { UsersService } from './users.service';
-import { OtpService } from './otp.service';
+import { UsersService } from '../services/users.service';
+import { OtpService } from '../services/otp.service';
 import { Messages } from 'src/global/message';
 import { PermissionsGuard } from 'src/global/guard/permissions.guard';
 import { Permissions } from 'src/global/decorators/permissions.decorator';
-import { CreateAuthorDto } from './dto/create-author.dto';
+import { CreateAuthorDto } from '../dto/create-author.dto';
 
 @Controller('authors')
 @UseGuards(PermissionsGuard)

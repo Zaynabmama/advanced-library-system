@@ -2,7 +2,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { generate } from 'otp-generator';
-import { Otp, OtpDocument } from './schemas/otp.schema';
+import { Otp, OtpDocument } from '../schemas/otp.schema';
 import { ErrorMessages } from 'src/global/errors/errors';
 import { EmailService } from 'src/global/services/email.service';
 

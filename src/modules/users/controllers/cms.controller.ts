@@ -1,9 +1,9 @@
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
 import { Permissions } from 'src/global/decorators/permissions.decorator';
 import { PermissionsGuard } from 'src/global/guard/permissions.guard';
-import { UsersService } from './users.service';
-import { AssignRoleDto } from './dto/assign-role.dto';
-import { CreateCmsUserDto } from './dto/create-cms-user.dto';
+import { UsersService } from '../services/users.service';
+import { AssignRoleDto } from '../dto/assign-role.dto';
+import { CreateCmsUserDto } from '../dto/create-cms-user.dto';
 import { EmailService } from 'src/global/services/email.service';
 
 @Controller('cms')

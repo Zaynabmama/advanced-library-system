@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { UsersService } from '../users/users.service';
+import { UsersService } from '../users/services/users.service';
 import { UnauthorizedException } from '@nestjs/common';
 import { JwtPayload } from 'src/global/jwt-payload';
 import { UserType } from 'src/global/enums';

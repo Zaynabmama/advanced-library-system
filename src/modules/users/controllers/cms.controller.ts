@@ -5,6 +5,8 @@ import { UsersService } from '../services/users.service';
 import { AssignRoleDto } from '../dto/assign-role.dto';
 import { CreateCmsUserDto } from '../dto/create-cms-user.dto';
 import { EmailService } from 'src/global/services/email.service';
+import { PermissionsEnum } from 'src/global/enums';
+import { Messages } from 'src/global/message';
 
 @Controller('cms')
 @UseGuards(PermissionsGuard) 
@@ -15,17 +17,18 @@ export class CmsController {
   ) {}
 
   @Post('add-user')
-  @Permissions('add_user') 
+  @Permissions(PermissionsEnum.CREATE_CMS_USER) 
   async addCmsUser(@Body() createCmsUserDto: CreateCmsUserDto) {
     const password = await this.usersService.addCmsUser(createCmsUserDto);
     await this.emailService.sendCmsPasswordEmail(createCmsUserDto.email, password);
-    return { message: 'CMS user added successfully, password sent via email.' };
+    return { message: Messages.CMS_CREATED};
   }
 
   @Post('assign-role')
-  @Permissions('assign_roles')
+  @Permissions(PermissionsEnum.ASSIGN_ROLES)
   async assignRoleToCmsUser(@Body() assignRoleDto: AssignRoleDto) {
     await this.usersService.assignRoleToCmsUser(assignRoleDto.userId, assignRoleDto.roleId);
-    return { message: 'Role assigned successfully.' };
+    return { message: Messages.ROLE_ASSIGNED };
   }
+  
 }

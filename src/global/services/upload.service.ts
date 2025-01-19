@@ -1,59 +1,52 @@
-import { Injectable, BadRequestException } from '@nestjs/common';
-import * as fs from 'fs';
+import { Injectable } from '@nestjs/common';
 import * as path from 'path';
-import { v4 as uuidv4 } from 'uuid';
+import * as fs from 'fs';
 import { ErrorMessages } from '../errors/errors';
 
 @Injectable()
 export class UploadService {
-  private readonly baseUploadPath = path.resolve('./uploads'); 
-
   uploadFile(file: Express.Multer.File, uploadPath: string): string {
-    if (!file) {
-      throw new BadRequestException(ErrorMessages.FILE_NOT_PROVIDED);
+    const destination = path.resolve(uploadPath);
+    
+    
+    if (!fs.existsSync(destination)) {
+      fs.mkdirSync(destination, { recursive: true });
     }
 
-    const fullUploadPath = path.join(this.baseUploadPath, uploadPath);
-    if (!fs.existsSync(fullUploadPath)) {
-      fs.mkdirSync(fullUploadPath, { recursive: true });
-    }
+    
+    const fileName = file.originalname;
 
+   
+    const fullPath = path.join(destination, fileName);
 
-    const uniqueFileName = `${uuidv4()}-${file.originalname}`;
-    const fullFilePath = path.join(fullUploadPath, uniqueFileName);
+   
+    fs.writeFileSync(fullPath, file.buffer);
 
-
-    fs.writeFileSync(fullFilePath, file.buffer);
-
-    return path.relative(this.baseUploadPath, fullFilePath).replace(/\\/g, '/');
+    return `/${uploadPath}/${fileName}`;
   }
 
- 
-  validateFile(file: Express.Multer.File, allowedTypes: string[]) {
-    if (!file) {
-      throw new BadRequestException(ErrorMessages.FILE_NOT_UPLOADED);
-    }
-
-    if (!allowedTypes.includes(file.mimetype)) {
-      throw new BadRequestException(
-        `Invalid file type: ${file.mimetype}. Allowed types are: ${allowedTypes.join(', ')}.`,
-      );
-    }
+  validateFile(file: Express.Multer.File, allowedTypes: string[]): boolean {
+    const fileType = file.mimetype.split('/')[1]; 
+    return allowedTypes.includes(fileType);
   }
 
-  
-  uploadImage(file: Express.Multer.File, folder: string = 'images'): string {
-    const allowedImageTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-    this.validateFile(file, allowedImageTypes);
+  uploadImage(file: Express.Multer.File): string {
+    const allowedTypes = ['jpeg', 'png', 'jpg'];
+    if (!this.validateFile(file, allowedTypes)) {
+      throw new Error(ErrorMessages.INVALID_FILE_TYPE);
+    }
 
-    return this.uploadFile(file, folder);
+    const uploadPath = 'uploads/images'; 
+    return this.uploadFile(file, uploadPath);
   }
 
-  
-  uploadPdf(file: Express.Multer.File, folder: string = 'pdfs'): string {
-    const allowedPdfTypes = ['application/pdf'];
-    this.validateFile(file, allowedPdfTypes);
+  uploadPdf(file: Express.Multer.File): string {
+    const allowedTypes = ['pdf'];
+    if (!this.validateFile(file, allowedTypes)) {
+      throw new Error(ErrorMessages.INVALID_FILE_TYPE_PDF);
+    }
 
-    return this.uploadFile(file, folder);
+    const uploadPath = 'uploads/pdfs';
+    return this.uploadFile(file, uploadPath);
   }
 }

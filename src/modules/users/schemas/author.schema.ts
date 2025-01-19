@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 import { Language, UserType } from 'src/global/enums';
 
 
@@ -29,6 +29,8 @@ export class Author {
 
   @Prop({ required: true, enum: UserType, default: UserType.Author })
   userType: UserType;
+
+  readonly _id: Types.ObjectId;
 }
 
 export const AuthorSchema = SchemaFactory.createForClass(Author);

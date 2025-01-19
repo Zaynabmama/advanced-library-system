@@ -60,7 +60,7 @@ export class UsersService {
       throw new UnauthorizedException(ErrorMessages.UNAUTHORIZED);
     }
 
-    return cmsUser as CmsUser & { _id: Types.ObjectId };
+    return cmsUser as CmsUser ;
   }
 
   async registerMember(email: string, password: string, birthDate: Date) {
@@ -120,9 +120,18 @@ export class UsersService {
     email: string;
     name: { en: string; ar: string };
     biography: { en: string; ar: string };
-    profileImageUrl: string;
-  }) {
-    const author = new this.authorModel({ ...data });
+    profileImage?: Express.Multer.File; 
+  }): Promise<Author> {
+    let profileImageUrl = '';
+  
+    if (data.profileImage) {
+      profileImageUrl = this.uploadService.uploadImage(data.profileImage);
+    }
+    const author = new this.authorModel({
+      ...data,
+      profileImageUrl, 
+    });
+
     await author.save();
 
     await this.generatePinCodeForAuthor(author.email);

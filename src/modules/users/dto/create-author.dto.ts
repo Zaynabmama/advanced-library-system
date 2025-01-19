@@ -26,7 +26,7 @@ export class CreateAuthorDto {
   @Type(() => LocalizedTextDto)
   biography: LocalizedTextDto;
 
-  @IsNotEmpty()
-  @IsString()
-  profileImageUrl: string;
+  // @IsNotEmpty()
+  // @IsString()
+  // profileImageUrl: string;
 }

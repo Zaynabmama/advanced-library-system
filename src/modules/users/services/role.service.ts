@@ -9,8 +9,8 @@ export class RoleService {
   constructor(@InjectModel(Role.name) private roleModel: Model<Role>) {}
 
 
-  async createRole(roleName: string, permissions: string[]): Promise<Role> {
-    const role = new this.roleModel({ roleName, permissions });
+  async createRole(name: string, permissions: string[]): Promise<Role> {
+    const role = new this.roleModel({ name, permissions });
     return role.save();
   }
 

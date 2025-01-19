@@ -6,6 +6,9 @@ export const ErrorMessages = {
     UNAUTHORIZED: 'You are not authorized to perform this action.',
     EMAIL_SEND_FAILED: 'Failed to send the email. Please try again later.',
     FILE_NOT_PROVIDED:'No file provided for upload.',
-    FILE_NOT_UPLOADED:'No file uploaded.'
+    FILE_NOT_UPLOADED:'No file uploaded.',
+    INVALID_FILE_TYPE:'Invalid file type. Only images are allowed.',
+    INVALID_FILE_TYPE_PDF:'Invalid file type. Only PDF files are allowed.'
   };
+  
   

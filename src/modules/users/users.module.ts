@@ -12,6 +12,7 @@ import { Author, AuthorSchema } from './schemas/author.schema';
 import { Role, RoleSchema } from './schemas/role.schema';
 import { Otp, OtpSchema } from './schemas/otp.schema';
 import { PermissionsGuard } from 'src/global/guard/permissions.guard';
+import { RolesController } from './controllers/roles.controller';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { PermissionsGuard } from 'src/global/guard/permissions.guard';
     CmsController,
     MembersController,
     AuthorsController,
+    RolesController,
   ],
   providers: [
     UsersService,

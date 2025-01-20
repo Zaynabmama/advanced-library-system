@@ -10,6 +10,9 @@ export const Messages = {
     OTP_SENDED:'OTP sent to the provided email address.',
     PIN_GENERATED:'A new PIN code has been generated and sent to the author email.',
    // CMS_CREATED:'CMS user added successfully, password sent via email.',
-    AUTHOR_CREATED:'Author added successfully ,the PIN code has been sent to their email.'
+    AUTHOR_CREATED:'Author added successfully ,the PIN code has been sent to their email.',
+    BRANCH_CREATED:'Branch created successfully',
+    BRANCH_INVENTORY_UPDATED:'Branch inventory updated',
+    BRANCH_DELETED:'branch deleted'
 };
   

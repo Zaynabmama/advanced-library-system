@@ -22,14 +22,14 @@ export enum PermissionsEnum {
   PAGINATE_BOOKS = 'paginate_books', 
 
 
-  ADD_AUTHOR = 'add_author',  //
+  ADD_AUTHOR = 'add_author', 
   DELETE_AUTHOR = 'delete_author',
-  REGENERATE_AUTHOR_PIN = 'regenerate_author_pin', //
+  REGENERATE_AUTHOR_PIN = 'regenerate_author_pin', 
 
   PAGINATE_AUTHORS = 'paginate_authors',
 
-  CREATE_CMS_USER = 'create_cms_user',//
-  ASSIGN_ROLES = 'assign_roles', //
+  CREATE_CMS_USER = 'create_cms_user',
+  ASSIGN_ROLES = 'assign_roles', 
   CREATE_ROLE = 'create_role',
 
   PAGINATE_CMS_USERS = 'paginate_cms_users',

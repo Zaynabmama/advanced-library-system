@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, HydratedDocument, Types } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 
 export type BranchDocument = HydratedDocument<Branch>;
 
@@ -11,13 +11,13 @@ export class Branch {
   @Prop({ required: true })
   address: string;
 
+  @Prop({ type: [{ bookId: { type: Types.ObjectId, ref: 'Book' }, availableCopies: Number }], default: [] })
+  inventory: { bookId: Types.ObjectId; availableCopies: number }[];
+
   @Prop({ default: 0 })
   totalBooks: number;
 
-  @Prop({ type: [{ bookId: Types.ObjectId, availableCopies: Number }], default: [] })
-  inventory: { bookId: Types.ObjectId; availableCopies: number }[];
-
-  @Prop()
+  @Prop({ type: { latitude: Number, longitude: Number }, _id: false, required: false })
   location?: { latitude: number; longitude: number };
 }
 

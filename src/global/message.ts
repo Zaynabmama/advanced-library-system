@@ -13,6 +13,8 @@ export const Messages = {
     AUTHOR_CREATED:'Author added successfully ,the PIN code has been sent to their email.',
     BRANCH_CREATED:'Branch created successfully',
     BRANCH_INVENTORY_UPDATED:'Branch inventory updated',
-    BRANCH_DELETED:'branch deleted'
+    BRANCH_DELETED:'branch deleted',
+    BOOK_CREATED:'Book Created Successfly',
+    BOOK_UPDATED:'Branch inventory updated'
 };
   

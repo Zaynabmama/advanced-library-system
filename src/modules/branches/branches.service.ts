@@ -1,9 +1,9 @@
-import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model, Types } from 'mongoose';
+import { Model } from 'mongoose';
 import { Branch, BranchDocument } from './schemas/branch.schema';
-import { CreateBranchDto } from './dtos/creaate-branch.dto';
 import { UpdateInventoryDto } from './dtos/update-inventory.dto';
+import { CreateBranchDto } from './dtos/creaate-branch.dto';
 
 @Injectable()
 export class BranchService {
@@ -16,9 +16,6 @@ export class BranchService {
 
   async getBranchById(branchId: string): Promise<Branch> {
     const branch = await this.branchModel.findById(branchId);
-    if (!branch) {
-      throw new NotFoundException('Branch not found');
-    }
     return branch;
   }
 
@@ -27,44 +24,28 @@ export class BranchService {
     return this.branchModel.find().skip(skip).limit(limit).exec();
   }
 
-  async deleteBranch(branchId: string): Promise<void> {
-    const result = await this.branchModel.findByIdAndDelete(branchId);
-    if (!result) {
-      throw new NotFoundException('Branch not found');
-    }
-  }
-
-  async updateInventory(
-    branchId: string,
-    bookId: string,
-    delta: number,
-  ): Promise<void> {
+  async updateInventory(branchId: string, updateInventoryDto: UpdateInventoryDto): Promise<void> {
     const branch = await this.branchModel.findById(branchId);
     if (!branch) {
       throw new NotFoundException('Branch not found');
     }
-  
+
     const inventoryItem = branch.inventory.find(
-      (item) => item.bookId.toString() === bookId,
+      (item) => item.bookId.toString() === updateInventoryDto.bookId,
     );
-  
-    if (!inventoryItem && delta < 0) {
-      throw new BadRequestException('Book not found in inventory.');
-    }
-  
+
     if (inventoryItem) {
-      inventoryItem.availableCopies += delta;
-      if (inventoryItem.availableCopies < 0) {
-        throw new BadRequestException('Cannot have negative available copies.');
-      }
-    } else {
+      inventoryItem.availableCopies += updateInventoryDto.delta;
       branch.inventory.push({
-        bookId: new Types.ObjectId(bookId),
-        availableCopies: delta,
+        bookId: updateInventoryDto.bookId as any,
+        availableCopies: updateInventoryDto.delta,
       });
     }
-  
+
     await branch.save();
   }
- 
+
+  async deleteBranch(branchId: string): Promise<void> {
+    const result = await this.branchModel.findByIdAndDelete(branchId);
+  }
 }

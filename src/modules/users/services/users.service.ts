@@ -166,7 +166,5 @@ export class UsersService {
     return Math.random().toString(36).slice(-8);
   }
 
-  private generateRandomPin() {
-    return Math.random().toString(10).slice(-6);
-  }
+  
 }

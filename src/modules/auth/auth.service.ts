@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/services/users.service';
 import { UnauthorizedException } from '@nestjs/common';
@@ -54,4 +54,20 @@ export class AuthService {
       access_token: this.jwtService.sign(payload),
     };
   }
+
+//   async getProfile(memberId: string) {
+//     const member = await this.usersService.getMemberById(memberId);
+//     const borrowHistory = await this.borrowHistoryService.getBorrowHistoryForMember(
+//       memberId,
+//     );
+//     return {
+//       member: {
+//         _id: member._id,
+//         email: member.email,
+//         returnRate: member.returnRate,
+//       },
+//       borrowHistory,
+//     };
+//   }
+// 
 }

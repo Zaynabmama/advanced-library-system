@@ -1,5 +1,5 @@
+import { IsNotEmpty, IsString, IsOptional, IsNumber, ValidateNested, IsArray } from 'class-validator';
 import { Type } from 'class-transformer';
-import { IsOptional, IsString, IsNumber, ValidateNested } from 'class-validator';
 
 class LocationDto {
   @IsNumber()
@@ -9,21 +9,17 @@ class LocationDto {
   longitude: number;
 }
 
-export class UpdateBranchDto {
-  @IsOptional()
+export class CreateBranchDto {
+  @IsNotEmpty()
   @IsString()
-  name?: string;
+  name: string;
 
-  @IsOptional()
+  @IsNotEmpty()
   @IsString()
-  address?: string;
+  address: string;
 
   @IsOptional()
   @ValidateNested()
   @Type(() => LocationDto)
   location?: LocationDto;
-
-  @IsOptional()
-  @IsNumber()
-  totalBooks?: number;
 }

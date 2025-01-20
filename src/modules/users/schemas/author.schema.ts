@@ -26,6 +26,9 @@ export class Author {
   @Prop()
   profileImageUrl: string;
 
+  @Prop({ type: [{ type: Types.ObjectId, ref: 'Book' }] })
+  books: Types.ObjectId[];
+
 
   @Prop({ required: true, enum: UserType, default: UserType.Author })
   userType: UserType;

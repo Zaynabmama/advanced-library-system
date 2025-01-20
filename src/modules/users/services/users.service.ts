@@ -109,12 +109,9 @@ export class UsersService {
       { $unwind: { path: '$role', preserveNullAndEmptyArrays: true } },
     ]);
 
-    if (!cmsUsers.length) {
-      throw new NotFoundException('CMS user not found');
-    }
-
     return cmsUsers[0];
   }
+  // async getAllCmsUsersWithRoles(page: number, limit: number) {}
 
   async addAuthor(data: {
     email: string;
@@ -155,9 +152,6 @@ export class UsersService {
 
   async assignRoleToCmsUser(userId: string, roleId: any) {
     const cmsUser = await this.cmsUserModel.findById(userId);
-    if (!cmsUser) {
-      throw new NotFoundException('CMS User not found');
-    }
 
     const role = await this.roleModel.findById(roleId);
     if (!role) {

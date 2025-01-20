@@ -8,6 +8,9 @@ import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { JwtGuard } from './global/guard/jwt.guard';
 import { LoggingInterceptor } from './global/logging.interceptor';
 import { GlobalModule } from './global/global.module';
+import { BooksModule } from './modules/books/books.module';
+import { ReviewsModule } from './modules/reviews/reviews.module';
+import { BranchesModule } from './modules/branches/branches.module';
 
 @Module({
   imports: [
@@ -27,6 +30,9 @@ import { GlobalModule } from './global/global.module';
     GlobalModule,
     AuthModule,
     UsersModule,
+    BooksModule,
+    ReviewsModule,
+    BranchesModule,
    
   ],
   providers: [

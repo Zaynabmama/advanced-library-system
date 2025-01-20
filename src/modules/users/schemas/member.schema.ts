@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 import { UserType } from 'src/global/enums';
 
 export type MemberDocument = HydratedDocument<Member>;
@@ -15,19 +15,15 @@ export class Member {
 
   @Prop({ required: true })
   birthDate: Date;
+  
 
-  @Prop({ default: [] })
-  subscribedBooks: string[];
 
-  @Prop({ default: [] })
-  borrowedBooks: Array<{
-    borrowedBookId: string;
-    borrowedDate: Date;
-    returnDate: Date;
-  }>;
-
-  @Prop({ default: 100 })
+  @Prop({ type: Number, default: 100 })
   returnRate: number;
+
+  @Prop({ type: [{ type: Types.ObjectId, ref: 'BorrowHistory' }] })
+  borrowHistory: Types.ObjectId[];
+
 
   @Prop({ required: true, enum: UserType, default: UserType.Member })
   userType: UserType;

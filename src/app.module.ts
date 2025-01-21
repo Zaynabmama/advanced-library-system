@@ -34,8 +34,8 @@ import { BorrowHistoryModule } from './modules/borrow-history/borrow-history.mod
     GlobalModule,
     AuthModule,
     UsersModule,
-    //BooksModule,
     ReviewsModule,
+    //BooksModule,
     BranchModule,
     BookRequestsModule,
  

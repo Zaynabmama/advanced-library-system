@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "678e66ac642a70389f3d5516"
+  },
+  "name": "Central Library",
+  "address": "123 Main St, Cityville",
+  "totalBooks": 5,
+  "location": {
+    "latitude": 40.7128,
+    "longitude": -74.006
+  },
+  "inventory": [
+    {
+      "bookId": {
+        "$oid": "678f69fe8687a0ae8a1efe9b"
+      },
+      "availableCopies": 5,
+      "borrowableDays": 10,
+      "_id": {
+        "$oid": "678f6b9a8687a0ae8a1efe9f"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-01-20T15:07:24.447Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-21T09:40:42.157Z"
+  },
+  "__v": 1
+}]

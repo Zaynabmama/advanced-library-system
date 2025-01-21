@@ -1,0 +1,3266 @@
+{
+	"info": {
+		"_postman_id": "2df32166-4cd3-40b1-ba02-66fb268e1774",
+		"name": "library-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37268455"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"zaynabmama01@gmail.com\",\r\n  \"passwordOrPin\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Member Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"zaynabmama1@gmail.com\",\r\n  \"passwordOrPin\": \"2001Zaynab\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "260"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"104-QU0eJeu7TRw+WkEWRmeZWkiCxh8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 10:17:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzhjY2ZmNTkwOWVhYjU1MTIyNjAwM2MiLCJlbWFpbCI6InpheW5hYm1hbWExQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoibWVtYmVyIiwiaWF0IjoxNzM3MjgxODcyLCJleHAiOjE3MzcyODU0NzJ9.ixjUBEdg3Omd8cqkVIMZ1_Xyy72ZGEvGPYtlr3yVyb4\"\n}"
+								},
+								{
+									"name": "Author Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "260"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"104-QU0eJeu7TRw+WkEWRmeZWkiCxh8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 10:17:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzhjY2ZmNTkwOWVhYjU1MTIyNjAwM2MiLCJlbWFpbCI6InpheW5hYm1hbWExQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoibWVtYmVyIiwiaWF0IjoxNzM3MjgxODcyLCJleHAiOjE3MzcyODU0NzJ9.ixjUBEdg3Omd8cqkVIMZ1_Xyy72ZGEvGPYtlr3yVyb4\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"zaynabmama1@gmail.com\",\r\n  \"passwordOrPin\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "88"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"58-xJQGwHZ+BMo7GxC0J7WuqSq/wwk\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 10:18:34 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": [\n        \"passwordOrPin should not be empty\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+								}
+							]
+						},
+						{
+							"name": "Cms login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"elsa@gmail.com\",\r\n  \"password\": \"47em9r0h\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/cms-login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"cms-login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"zaynabmama01@gmail.com\",\r\n  \"password\": \"admin\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/cms-login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"cms-login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "284"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11c-IxMhXaYey8K1iHpok4udHmb2n/E\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 15:26:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzAwNDE3LCJleHAiOjE3MzczMDQwMTd9.OAv2yVk5MizaZn1IM1rWMClQhV6TvkeFyp04qihsVnU\"\n}"
+								},
+								{
+									"name": "Cms login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"elsa@gmail.com\",\r\n  \"password\": \"47em9r0h\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/cms-login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"cms-login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "270"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10e-NK88tNbVsiorsxD9Y5zAv1b9aHU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 22:03:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhkNzUyYjU1MjJhMmVjMTBkMmFhZGIiLCJlbWFpbCI6ImVsc2FAZ21haWwuY29tIiwidXNlclR5cGUiOiJjbXMiLCJwZXJtaXNzaW9ucyI6W10sImlhdCI6MTczNzMyNDIyMywiZXhwIjoxNzM3MzI3ODIzfQ.pGUHz6mlAhYnfb1cBliGBDR6qOndVgxR1iyBv6rgK_0\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Author Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"alice@gmail.com\",\r\n  \"passwordOrPin\": \"799148\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Author Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"author1@example.com\",\r\n  \"passwordOrPin\": \"787581\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/login ",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"login "
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "258"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"102-yfJ1QjY+Q3rVlCBrhEYyQDsM44A\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 15:53:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhkMWJmNWJjMzJiODNjMTNhZjUzOTMiLCJlbWFpbCI6ImF1dGhvcjFAZXhhbXBsZS5jb20iLCJ1c2VyVHlwZSI6ImF1dGhvciIsImlhdCI6MTczNzMwMjAwNywiZXhwIjoxNzM3MzA1NjA3fQ.ep9SIi_N0eq7vfNNO6GkzUx1hGF57Ird6P-pxtafWMQ\"\n}"
+								},
+								{
+									"name": "Author login with newb pin code",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"author1@example.com\",\r\n  \"passwordOrPin\": \"499074\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "258"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"102-irP20CPZ8C+zJu1C+yaaZ7mSMWI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 15:59:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhkMWJmNWJjMzJiODNjMTNhZjUzOTMiLCJlbWFpbCI6ImF1dGhvcjFAZXhhbXBsZS5jb20iLCJ1c2VyVHlwZSI6ImF1dGhvciIsImlhdCI6MTczNzMwMjM2NiwiZXhwIjoxNzM3MzA1OTY2fQ.0McDd_LzIJkNwNymZTMQsjkMEZm8hu3n4mUQu6GKJeQ\"\n}"
+								},
+								{
+									"name": "Author Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"alice@gmail.com\",\r\n  \"passwordOrPin\": \"799148\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/auth/login",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "252"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"fc-Unjg0ggfsXHKOTpHE64iBhNVOes\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Jan 2025 18:50:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhkNDhmNjMzNzRlNWMyZjg3YzZjYzAiLCJlbWFpbCI6ImFsaWNlQGdtYWlsLmNvbSIsInVzZXJUeXBlIjoiYXV0aG9yIiwiaWF0IjoxNzM3MzEyNjE0LCJleHAiOjE3MzczMTYyMTR9.g9aNNLAMc_6crCdpKNNjOEpsDtjiwSEO7OtYKSgCMSI\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Member Registration",
+			"item": [
+				{
+					"name": "send-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"zaynabmama@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/members/send-otp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"members",
+								"send-otp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send MEmber Otp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"zaynabmama2@gmail.com\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/members/send-otp",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"members",
+										"send-otp"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-Pf8+U/YR4Gp4LQc8hTjvfNrDYig\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 09:16:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OTP sent to the provided email address.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"zaynabmama2@gmail.com\",\r\n  \"password\": \"\",\r\n  \"birthDate\": \"2001-08-01\",\r\n  \"otp\": \"6Oi38L\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/members/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"members",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sign up",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"zaynabmama1@gmail.com\",\r\n  \"password\": \"2001Zaynab\",\r\n  \"birthDate\": \"2001-08-01\",\r\n  \"otp\": \"VOSNKA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/members/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"members",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-8FiEHLV5TrCCIs0q3kA3sZ6mico\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 10:12:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Member registered successfully\"\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"zaynabmama2@gmail.com\",\r\n  \"password\": \"\",\r\n  \"birthDate\": \"2001-08-01\",\r\n  \"otp\": \"6Oi38L\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/members/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"members",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-DBBHlFWxRsLHoB0fR864OGIB2Vk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 10:13:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": [\n        \"password must be longer than or equal to 6 characters\",\n        \"password should not be empty\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CMS",
+			"item": [
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Create Role",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzMxNDY1LCJleHAiOjE3MzczMzUwNjV9.KnBhEUE6zgevH8dDMnzt-ML_gJ6wf12a-7rF3MbyziA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"intern\",\n  \"permissions\": [\"add_book\", \"update_book\"]\n}"
+								},
+								"url": {
+									"raw": "{{url}}/roles",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"roles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Role",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"intern\",\n  \"permissions\": [\"add_book\", \"update_book\"]\n}"
+										},
+										"url": {
+											"raw": "{{url}}/roles",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"roles"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "224"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e0-mMGgih/y6CLkk9NZZpJ2KTdXmjY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 00:10:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Role created successfully\",\n    \"role\": {\n        \"name\": \"intern\",\n        \"permissions\": [\n            \"add_book\",\n            \"update_book\"\n        ],\n        \"_id\": \"678d948d69446c4a80d86b20\",\n        \"createdAt\": \"2025-01-20T00:10:53.107Z\",\n        \"updatedAt\": \"2025-01-20T00:10:53.107Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Roles",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzMxNDY1LCJleHAiOjE3MzczMzUwNjV9.KnBhEUE6zgevH8dDMnzt-ML_gJ6wf12a-7rF3MbyziA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/roles?page=1&limit=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"roles"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get All Roles",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{url}}/roles?page=1&limit=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"roles"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "946"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3b2-FXaSSwQZqNiLx6EKryhDCAeF8ww\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 00:12:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Roles fetched successfully.\",\n    \"data\": [\n        {\n            \"_id\": \"678cd889603866d1f746bd8f\",\n            \"name\": \"Admin\",\n            \"permissions\": [\n                \"*\"\n            ],\n            \"createdAt\": \"2025-01-19T10:48:41.260Z\",\n            \"updatedAt\": \"2025-01-19T10:48:41.260Z\"\n        },\n        {\n            \"_id\": \"678d5d5df75d6cc86f8d4dc0\",\n            \"name\": \"Editor\",\n            \"permissions\": [\n                \"add_book\",\n                \"update_book\",\n                \"publish_book\"\n            ],\n            \"createdAt\": \"2025-01-19T20:15:25.304Z\",\n            \"updatedAt\": \"2025-01-19T20:15:25.304Z\"\n        },\n        {\n            \"_id\": \"678d5d5df75d6cc86f8d4dc1\",\n            \"name\": \"Viewer\",\n            \"permissions\": [\n                \"view_dashboard\",\n                \"view_book_statistics\"\n            ],\n            \"createdAt\": \"2025-01-19T20:15:25.304Z\",\n            \"updatedAt\": \"2025-01-19T20:15:25.304Z\"\n        },\n        {\n            \"_id\": \"678d5d5df75d6cc86f8d4dc2\",\n            \"name\": \"Branch Manager\",\n            \"permissions\": [\n                \"manage_branches\",\n                \"distribute_books\"\n            ],\n            \"createdAt\": \"2025-01-19T20:15:25.304Z\",\n            \"updatedAt\": \"2025-01-19T20:15:25.304Z\"\n        },\n        {\n            \"_id\": \"678d948d69446c4a80d86b20\",\n            \"name\": \"intern\",\n            \"permissions\": [\n                \"add_book\",\n                \"update_book\"\n            ],\n            \"createdAt\": \"2025-01-20T00:10:53.107Z\",\n            \"updatedAt\": \"2025-01-20T00:10:53.107Z\",\n            \"__v\": 0\n        }\n    ],\n    \"total\": 5\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Role By ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzMxNDY1LCJleHAiOjE3MzczMzUwNjV9.KnBhEUE6zgevH8dDMnzt-ML_gJ6wf12a-7rF3MbyziA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/roles/678cd889603866d1f746bd8f",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"roles",
+										"678cd889603866d1f746bd8f"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Role By ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/roles/678cd889603866d1f746bd8f",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"roles",
+												"678cd889603866d1f746bd8f"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "195"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"c3-7UmborIT0xu+sLQxmOV4ExCvBGo\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 00:13:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Role fetched successfully.\",\n    \"role\": {\n        \"_id\": \"678cd889603866d1f746bd8f\",\n        \"name\": \"Admin\",\n        \"permissions\": [\n            \"*\"\n        ],\n        \"createdAt\": \"2025-01-19T10:48:41.260Z\",\n        \"updatedAt\": \"2025-01-19T10:48:41.260Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Role Permissions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzMxNDY1LCJleHAiOjE3MzczMzUwNjV9.KnBhEUE6zgevH8dDMnzt-ML_gJ6wf12a-7rF3MbyziA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"permissions\": [\"update_book\"]\n}"
+								},
+								"url": {
+									"raw": "{{url}}/roles/678d948d69446c4a80d86b20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"roles",
+										"678d948d69446c4a80d86b20"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Role Permissions",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"permissions\": [\"update_book\"]\n}"
+										},
+										"url": {
+											"raw": "{{url}}/roles/678d948d69446c4a80d86b20",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"roles",
+												"678d948d69446c4a80d86b20"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "208"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d0-clflzrnIouN927TtR3meneRZTf8\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 00:15:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Role updated \",\n    \"updatedRole\": {\n        \"_id\": \"678d948d69446c4a80d86b20\",\n        \"name\": \"intern\",\n        \"permissions\": [\n            \"update_book\"\n        ],\n        \"createdAt\": \"2025-01-20T00:10:53.107Z\",\n        \"updatedAt\": \"2025-01-20T00:15:38.365Z\",\n        \"__v\": 1\n    }\n}"
+								},
+								{
+									"name": "Update Role Permissions",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"permissions\": [\"update_book\"]\n}"
+										},
+										"url": {
+											"raw": "{{url}}/roles/678d948d69446c4a80d86b20",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"roles",
+												"678d948d69446c4a80d86b20"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "208"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d0-clflzrnIouN927TtR3meneRZTf8\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 00:15:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Role updated \",\n    \"updatedRole\": {\n        \"_id\": \"678d948d69446c4a80d86b20\",\n        \"name\": \"intern\",\n        \"permissions\": [\n            \"update_book\"\n        ],\n        \"createdAt\": \"2025-01-20T00:10:53.107Z\",\n        \"updatedAt\": \"2025-01-20T00:15:38.365Z\",\n        \"__v\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Role Permission Error",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzMxNDY1LCJleHAiOjE3MzczMzUwNjV9.KnBhEUE6zgevH8dDMnzt-ML_gJ6wf12a-7rF3MbyziA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"permissions\": [ ]\n}"
+								},
+								"url": {
+									"raw": "{{url}}/roles/678d948d69446c4a80d86b20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"roles",
+										"678d948d69446c4a80d86b20"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update Role Permission Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"permissions\": [ ]\n}"
+										},
+										"url": {
+											"raw": "{{url}}/roles/678d948d69446c4a80d86b20",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"roles",
+												"678d948d69446c4a80d86b20"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "86"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"56-4U33WOp3GzcRi9LHnB0eRM9Xd/A\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 00:16:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": [\n        \"permissions should not be empty\"\n    ],\n    \"error\": \"Bad Request\",\n    \"statusCode\": 400\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Branches",
+					"item": [
+						{
+							"name": "Create Branch",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Central Library\",\n  \"address\": \"123 Main St, Cityville\",\n  \"location\": { \"latitude\": 40.7128, \"longitude\": -74.0060 }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/branches",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"branches"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Branch",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Central Library\",\n  \"address\": \"123 Main St, Cityville\",\n  \"location\": { \"latitude\": 40.7128, \"longitude\": -74.0060 }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/branches",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"branches"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "313"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"139-AJrKPTJB/eUg2g8tpC6vNOX8nc0\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 15:02:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Branch created successfully\",\n    \"branch\": {\n        \"name\": \"Central Library\",\n        \"address\": \"123 Main St, Cityville\",\n        \"totalBooks\": 0,\n        \"location\": {\n            \"latitude\": 40.7128,\n            \"longitude\": -74.006\n        },\n        \"_id\": \"678e6599642a70389f3d5513\",\n        \"inventory\": [],\n        \"createdAt\": \"2025-01-20T15:02:49.991Z\",\n        \"updatedAt\": \"2025-01-20T15:02:49.991Z\",\n        \"__v\": 0\n    }\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <your_access_token>",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Central Library\",\n  \"address\": \"123 Main St, Cityville\",\n  \"location\": { \"latitude\": 40.7128, \"longitude\": -74.0060 }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/branches",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"branches"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "43"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2b-dGnJzt6gv1nJjX6DJ9RztDWptng\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Jan 2025 15:03:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthorized\",\n    \"statusCode\": 401\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Delete Branch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3Mzg0NzY1LCJleHAiOjE3MzczODgzNjV9.du6tpBWW2eyFGSrtNKyz6c-ETC9lw38OZirzqZRXZYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_access_token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/branches/678e6599642a70389f3d5513",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"branches",
+								"678e6599642a70389f3d5513"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Branch",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/branches/678e6599642a70389f3d5513",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"branches",
+										"678e6599642a70389f3d5513"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-81AoLNpaZ4AmcjAXDFcZ6R2vUeA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 15:06:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"branch deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzI1MTkzLCJleHAiOjE3MzczMjg3OTN9.kmubgPmJbKJjPh_sHhngOLdgFGZ82SQTn40-1c7N1us",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "elissa@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name[en]",
+									"value": "elissa",
+									"type": "text"
+								},
+								{
+									"key": "biography[ar]",
+									"value": "أليس كاتبة",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/Administrator/Downloads/download.jpeg"
+								},
+								{
+									"key": "biography[en]",
+									"value": "elissa is a fiction writer.",
+									"type": "text"
+								},
+								{
+									"key": "name[ar]",
+									"value": "اليسا",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/authors/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Author",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "alice@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "name[en]",
+											"value": "Alice Smith",
+											"type": "text"
+										},
+										{
+											"key": "biography[ar]",
+											"value": "أليس كاتبة خيال",
+											"type": "text"
+										},
+										{
+											"key": "profileImage",
+											"type": "file",
+											"src": "/C:/Users/Administrator/Downloads/download.jpeg"
+										},
+										{
+											"key": "biography[en]",
+											"value": "Alice is a fiction writer.",
+											"type": "text"
+										},
+										{
+											"key": "name[ar]",
+											"value": "أليس سميث",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authors/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authors",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "255"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ff-ji5g+Jjz8v8BZp7tMQCyBdY7RUk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 18:48:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Author added successfully ,the PIN code has been sent to their email.\",\n    \"author\": {\n        \"id\": \"678d48f63374e5c2f87c6cc0\",\n        \"email\": \"alice@gmail.com\",\n        \"name\": {\n            \"en\": \"Alice Smith\",\n            \"ar\": \"أليس سميث\"\n        },\n        \"profileImageUrl\": \"/uploads/images/download.jpeg\"\n    }\n}"
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "alicia@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "name[en]",
+											"value": "Alicia ",
+											"type": "text"
+										},
+										{
+											"key": "biography[ar]",
+											"value": "أليس كاتبة",
+											"type": "text"
+										},
+										{
+											"key": "profileImage",
+											"type": "file",
+											"src": "/C:/Users/Administrator/Downloads/download.jpeg"
+										},
+										{
+											"key": "biography[en]",
+											"value": "Alice is a fiction writer.",
+											"type": "text"
+										},
+										{
+											"key": "name[ar]",
+											"value": "أليس",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/authors/add",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authors",
+										"add"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"61-BBpGbF0sVqnUUcSh+4mqfb+Us2k\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 22:18:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You are not authorized to perform this action.\",\n    \"error\": \"Forbidden\",\n    \"statusCode\": 403\n}"
+						}
+					]
+				},
+				{
+					"name": "Resend Otp to author",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzAwNDE3LCJleHAiOjE3MzczMDQwMTd9.OAv2yVk5MizaZn1IM1rWMClQhV6TvkeFyp04qihsVnU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"author1@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/authors/regenerate-pin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors",
+								"regenerate-pin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Resend Otp to author",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"author1@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/authors/regenerate-pin",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"authors",
+										"regenerate-pin"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "77"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d-0Mf3+4SKDc21jho/KG1/KrBX8wU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 15:58:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A new PIN code has been generated and sent to the author email.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ADD CMS USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzIzNzY1LCJleHAiOjE3MzczMjczNjV9.acQHkovWLRhdERsOkN38T2oKd7gDnO6kdj45PwRyRO0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"elsa hm \",\r\n  \"email\": \"elsa@gmail.com\",\r\n  \"roleId\": \"678d5d5df75d6cc86f8d4dc0\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cms/add-user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cms",
+								"add-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UNAUTHORIZED",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fullName\": \"elsa hm \",\r\n  \"email\": \"elsa@gmail.com\",\r\n  \"roleId\": \"678d5d5df75d6cc86f8d4dc0\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/cms/add-user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"cms",
+										"add-user"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-dGnJzt6gv1nJjX6DJ9RztDWptng\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 21:54:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\",\n    \"statusCode\": 401\n}"
+						},
+						{
+							"name": "Add Cms user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fullName\": \"elsa hm \",\r\n  \"email\": \"elsa@gmail.com\",\r\n  \"roleId\": \"678d5d5df75d6cc86f8d4dc0\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/cms/add-user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"cms",
+										"add-user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-YepdKuSrgkli1Zqraj167eP7JqI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Jan 2025 21:57:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"CMS user added successfully ,The password has been sent to their email.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Branches",
+			"item": [
+				{
+					"name": "Get Branch By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/branches/678e66ac642a70389f3d5516",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"branches",
+								"678e66ac642a70389f3d5516"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Branch By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/branches/678e66ac642a70389f3d5516",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"branches",
+										"678e66ac642a70389f3d5516"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-W4L64OlcGNUcfkruEPJGfyyhdcg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 15:08:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"678e66ac642a70389f3d5516\",\n    \"name\": \"Central Library\",\n    \"address\": \"123 Main St, Cityville\",\n    \"totalBooks\": 0,\n    \"location\": {\n        \"latitude\": 40.7128,\n        \"longitude\": -74.006\n    },\n    \"inventory\": [],\n    \"createdAt\": \"2025-01-20T15:07:24.447Z\",\n    \"updatedAt\": \"2025-01-20T15:07:24.447Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Branches",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_access_token>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/branches?page=1&limit=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"branches"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Branches",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_access_token>",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/branches?page=1&limit=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"branches"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-gOjZy5ydnCPkt8/K8v1xlJDCCE8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 15:08:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"678e66ac642a70389f3d5516\",\n        \"name\": \"Central Library\",\n        \"address\": \"123 Main St, Cityville\",\n        \"totalBooks\": 0,\n        \"location\": {\n            \"latitude\": 40.7128,\n            \"longitude\": -74.006\n        },\n        \"inventory\": [],\n        \"createdAt\": \"2025-01-20T15:07:24.447Z\",\n        \"updatedAt\": \"2025-01-20T15:07:24.447Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Distribute books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3NDUwOTI5LCJleHAiOjE3Mzc1MzczMjl9.34nV3qoKPrkK7wJb8yhhBl3oCnNxl2GKb69dqurwt_w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookId\": \"678f69fe8687a0ae8a1efe9b\",\n  \"numberOfCopies\": 5,\n  \"borrowableDays\":10\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/branches/678e66ac642a70389f3d5516/distribute-books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"branches",
+								"678e66ac642a70389f3d5516",
+								"distribute-books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Branch Inventory",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"bookId\": \"678f69fe8687a0ae8a1efe9b\",\n  \"numberOfCopies\": 5,\n  \"borrowableDays\":10\n}\n"
+								},
+								"url": {
+									"raw": "{{url}}/branches/678e66ac642a70389f3d5516/distribute-books",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"branches",
+										"678e66ac642a70389f3d5516",
+										"distribute-books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-JvWLItgHptvUoi4HKpaWhuA/gYU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 09:40:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Books distributed successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book Request Apis",
+			"item": [
+				{
+					"name": "Create Book Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3NDE0MDA2LCJleHAiOjE3Mzc1MDA0MDZ9.iXvYbug0zQ5byhjeMbcAZo-Oy8BCVrpmGe_7WEZQUvI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your-jwt-token>",
+								"description": "JWT Token"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/Administrator/Downloads/download.jpeg"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/Administrator/Downloads/EBD-Second Assignment - Advanced Library System-100125-104536 (1).pdf"
+								},
+								{
+									"key": "title",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "genre",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "978-3-16-1484789",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A captivating .",
+									"type": "text"
+								},
+								{
+									"key": "minimumAge",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "requestedCopies",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/book-requests",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book-requests"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Book Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your-jwt-token>",
+										"description": "JWT Token"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/Administrator/Downloads/download.jpeg"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/Administrator/Downloads/EBD-Second Assignment - Advanced Library System-100125-104536 (1).pdf"
+										},
+										{
+											"key": "title",
+											"value": "abc",
+											"type": "text"
+										},
+										{
+											"key": "genre",
+											"value": "abc",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "978-3-16-148410",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "A captivating fantasy .",
+											"type": "text"
+										},
+										{
+											"key": "minimumAge",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "requestedCopies",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/book-requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"book-requests"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-UoBjXF2phtqOpSk5Q3Fl1OjgusM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 23:14:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"request Created Successfly\"\n}"
+						},
+						{
+							"name": "Create Book Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your-jwt-token>",
+										"description": "JWT Token"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/Administrator/Downloads/download.jpeg"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/Administrator/Downloads/EBD-Second Assignment - Advanced Library System-100125-104536 (1).pdf"
+										},
+										{
+											"key": "title",
+											"value": "abc",
+											"type": "text"
+										},
+										{
+											"key": "genre",
+											"value": "abc",
+											"type": "text"
+										},
+										{
+											"key": "isbn",
+											"value": "978-3-16-1484789",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "A captivating .",
+											"type": "text"
+										},
+										{
+											"key": "minimumAge",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "requestedCopies",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/book-requests",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"book-requests"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-UoBjXF2phtqOpSk5Q3Fl1OjgusM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 09:32:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"request Created Successfly\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Book Requests",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3NDE0MDA2LCJleHAiOjE3Mzc1MDA0MDZ9.iXvYbug0zQ5byhjeMbcAZo-Oy8BCVrpmGe_7WEZQUvI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <TOKEN>",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/book-requests?status=pending&authorId=678eb1a0cc33e81e71aa933b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "pending"
+								},
+								{
+									"key": "authorId",
+									"value": "678eb1a0cc33e81e71aa933b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Book Requests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <TOKEN>",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/book-requests?status=pending&authorId=678eb1a0cc33e81e71aa933b",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"book-requests"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "pending"
+										},
+										{
+											"key": "authorId",
+											"value": "678eb1a0cc33e81e71aa933b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c9-47ghVAWQd2+ph8P0b6h5J1Vasjk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 23:30:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"678ed239ba43828e4232527e\",\n            \"title\": \"History of the Unknown\",\n            \"genre\": \"History\",\n            \"isbn\": \"978-0-333444-55-6\",\n            \"description\": \"Exploring lesser-known historical events.\",\n            \"minAgeRequirement\": 15,\n            \"numberOfCopies\": 6,\n            \"pdfUrl\": \"/uploads/pdfs/history-unknown.pdf\",\n            \"coverImageUrl\": \"/uploads/images/history-unknown.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa933b\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get All Book Requests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <TOKEN>",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/book-requests?status=pending",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"book-requests"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "pending"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4001"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fa1-Sp/hwo47/x38Ce3CSCI0k07kIJY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 23:31:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"678ed239ba43828e42325279\",\n            \"title\": \"The Mystery of the Moon\",\n            \"genre\": \"Mystery\",\n            \"isbn\": \"978-1-234567-89-0\",\n            \"description\": \"An intriguing mystery novel set on a lunar colony.\",\n            \"minAgeRequirement\": 16,\n            \"numberOfCopies\": 5,\n            \"pdfUrl\": \"/uploads/pdfs/mystery-moon.pdf\",\n            \"coverImageUrl\": \"/uploads/images/mystery-moon.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa933c\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e4232527a\",\n            \"title\": \"Adventures in Space\",\n            \"genre\": \"Sci-Fi\",\n            \"isbn\": \"978-1-987654-32-1\",\n            \"description\": \"A thrilling sci-fi adventure through the galaxy.\",\n            \"minAgeRequirement\": 12,\n            \"numberOfCopies\": 8,\n            \"pdfUrl\": \"/uploads/pdfs/adventures-space.pdf\",\n            \"coverImageUrl\": \"/uploads/images/adventures-space.jpg\",\n            \"authorId\": \"678d48f63374e5c2f87c6cc0\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e4232527b\",\n            \"title\": \"The Poetry of Dreams\",\n            \"genre\": \"Poetry\",\n            \"isbn\": \"978-3-456789-01-2\",\n            \"description\": \"A collection of poems inspired by dreams.\",\n            \"minAgeRequirement\": 10,\n            \"numberOfCopies\": 10,\n            \"pdfUrl\": \"/uploads/pdfs/poetry-dreams.pdf\",\n            \"coverImageUrl\": \"/uploads/images/poetry-dreams.jpg\",\n            \"authorId\": \"678d7af8e4d224250fce14b1\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e4232527c\",\n            \"title\": \"Tales of the Forest\",\n            \"genre\": \"Fantasy\",\n            \"isbn\": \"978-0-567890-12-3\",\n            \"description\": \"Magical tales from a mythical forest.\",\n            \"minAgeRequirement\": 14,\n            \"numberOfCopies\": 7,\n            \"pdfUrl\": \"/uploads/pdfs/tales-forest.pdf\",\n            \"coverImageUrl\": \"/uploads/images/tales-forest.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa9339\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e4232527d\",\n            \"title\": \"The Great Explorer\",\n            \"genre\": \"Adventure\",\n            \"isbn\": \"978-1-111222-33-4\",\n            \"description\": \"An explorer's journey across uncharted lands.\",\n            \"minAgeRequirement\": 18,\n            \"numberOfCopies\": 4,\n            \"pdfUrl\": \"/uploads/pdfs/great-explorer.pdf\",\n            \"coverImageUrl\": \"/uploads/images/great-explorer.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa933a\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e4232527e\",\n            \"title\": \"History of the Unknown\",\n            \"genre\": \"History\",\n            \"isbn\": \"978-0-333444-55-6\",\n            \"description\": \"Exploring lesser-known historical events.\",\n            \"minAgeRequirement\": 15,\n            \"numberOfCopies\": 6,\n            \"pdfUrl\": \"/uploads/pdfs/history-unknown.pdf\",\n            \"coverImageUrl\": \"/uploads/images/history-unknown.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa933b\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e4232527f\",\n            \"title\": \"Science Wonders\",\n            \"genre\": \"Science\",\n            \"isbn\": \"978-1-555666-77-8\",\n            \"description\": \"A deep dive into scientific wonders.\",\n            \"minAgeRequirement\": 13,\n            \"numberOfCopies\": 9,\n            \"pdfUrl\": \"/uploads/pdfs/science-wonders.pdf\",\n            \"coverImageUrl\": \"/uploads/images/science-wonders.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa933d\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed239ba43828e42325280\",\n            \"title\": \"The Art of War\",\n            \"genre\": \"Philosophy\",\n            \"isbn\": \"978-1-666777-88-9\",\n            \"description\": \"Ancient strategies and philosophies on warfare.\",\n            \"minAgeRequirement\": 17,\n            \"numberOfCopies\": 3,\n            \"pdfUrl\": \"/uploads/pdfs/art-war.pdf\",\n            \"coverImageUrl\": \"/uploads/images/art-war.jpg\",\n            \"authorId\": \"678eb1a0cc33e81e71aa933c\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T22:46:17.157Z\",\n            \"updatedAt\": \"2025-01-20T22:46:17.157Z\"\n        },\n        {\n            \"_id\": \"678ed8eed3c253ce2dc4f1a5\",\n            \"title\": \"abc\",\n            \"genre\": \"abc\",\n            \"isbn\": \"978-3-16-148410\",\n            \"description\": \"A captivating fantasy .\",\n            \"minimumAge\": 12,\n            \"requestedCopies\": 100,\n            \"authorId\": \"678cdbb1603866d1f746bd90\",\n            \"pdfUrl\": \"/uploads/pdfs/EBD-Second Assignment - Advanced Library System-100125-104536 (1).pdf\",\n            \"coverImageUrl\": \"/uploads/images/download.jpeg\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2025-01-20T23:14:54.767Z\",\n            \"updatedAt\": \"2025-01-20T23:14:54.767Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Approve Update Book Request Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3NDUwOTI5LCJleHAiOjE3Mzc1MzczMjl9.34nV3qoKPrkK7wJb8yhhBl3oCnNxl2GKb69dqurwt_w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <TOKEN>",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"approved\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/book-requests/678f69c18687a0ae8a1efe98",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book-requests",
+								"678f69c18687a0ae8a1efe98"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Approve Update Book Request Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <TOKEN>",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/book-requests/678f69c18687a0ae8a1efe98",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"book-requests",
+										"678f69c18687a0ae8a1efe98"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-8R3QZT8JvfNCUcXsMKj1rHuqqIE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 09:33:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"updated\"\n}"
+						},
+						{
+							"name": "Approve Update Book Request Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <TOKEN>",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/book-requests/678f69c18687a0ae8a1efe98",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"book-requests",
+										"678f69c18687a0ae8a1efe98"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-8R3QZT8JvfNCUcXsMKj1rHuqqIE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 09:33:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"updated\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": []
+		},
+		{
+			"name": "Borrowing book",
+			"item": []
+		},
+		{
+			"name": "Get CMS User by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzhjZGJiMTYwMzg2NmQxZjc0NmJkOTAiLCJlbWFpbCI6InpheW5hYm1hbWEwMUBnbWFpbC5jb20iLCJ1c2VyVHlwZSI6ImNtcyIsInBlcm1pc3Npb25zIjpbIioiXSwiaWF0IjoxNzM3MzMxNDY1LCJleHAiOjE3MzczMzUwNjV9.KnBhEUE6zgevH8dDMnzt-ML_gJ6wf12a-7rF3MbyziA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <your_access_token>",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/cms/678d752b5522a2ec10d2aadb",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"678d752b5522a2ec10d2aadb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get CMS User by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <your_access_token>",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/cms/678d752b5522a2ec10d2aadb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cms",
+								"678d752b5522a2ec10d2aadb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12f-1z3n0qxGa+nE8rY+o0cZutFA2hI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 00:41:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"_id\": \"678d752b5522a2ec10d2aadb\",\n        \"fullName\": \"elsa hm \",\n        \"email\": \"elsa@gmail.com\",\n        \"password\": \"$2b$10$SLVWuKi.o41f31xJI3Khcu4Kp9PtVjhD/wYHHYrcJJtC3kEmae2TC\",\n        \"roleId\": \"678d5d5df75d6cc86f8d4dc0\",\n        \"userType\": \"cms\",\n        \"createdAt\": \"2025-01-19T21:56:59.339Z\",\n        \"updatedAt\": \"2025-01-19T21:56:59.339Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}

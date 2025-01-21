@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "678ccd62909eab5512260021"
+  },
+  "email": "zaynabmamaa@gmail.com",
+  "password": "$2b$10$TcvZDAhXlfICwSK7SB8/9.Ros551vOguE.mMJtBeWyh5WkuTO54VW",
+  "birthDate": {
+    "$date": "2001-08-01T00:00:00.000Z"
+  },
+  "subscribedBooks": [],
+  "borrowedBooks": [],
+  "returnRate": 100,
+  "userType": "member",
+  "isEmailVerified": false,
+  "createdAt": {
+    "$date": "2025-01-19T10:01:06.287Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T10:01:06.287Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "678cce73909eab551226002c"
+  },
+  "email": "zaynabmama@gmail.com",
+  "password": "$2b$10$moR.1IJwByCE9C0zlIHFfe26qn9kdsZiI0RnauakkdGOVDsx.bFNW",
+  "birthDate": {
+    "$date": "2001-08-01T00:00:00.000Z"
+  },
+  "subscribedBooks": [],
+  "borrowedBooks": [],
+  "returnRate": 100,
+  "userType": "member",
+  "isEmailVerified": false,
+  "createdAt": {
+    "$date": "2025-01-19T10:05:39.627Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T10:05:39.627Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "678ccff5909eab551226003c"
+  },
+  "email": "zaynabmama1@gmail.com",
+  "password": "$2b$10$oL13UBPkfjZA0vkZEEENReL6LrHb2lb32KnFSPce9VcW3gNTPUIqi",
+  "birthDate": {
+    "$date": "2001-08-01T00:00:00.000Z"
+  },
+  "subscribedBooks": [],
+  "borrowedBooks": [],
+  "returnRate": 100,
+  "userType": "member",
+  "isEmailVerified": false,
+  "createdAt": {
+    "$date": "2025-01-19T10:12:05.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T10:12:05.174Z"
+  },
+  "__v": 0
+}]

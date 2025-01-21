@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "678cdbb1603866d1f746bd90"
+  },
+  "fullName": "System Admin",
+  "email": "zaynabmama01@gmail.com",
+  "password": "$2b$10$jF8gPfQ7P7h8GjOGhIEXxeNao5qr7Co2CH8lI.FC2mvQRGfwRk/c.",
+  "roleId": {
+    "$oid": "678cd889603866d1f746bd8f"
+  },
+  "userType": "cms",
+  "createdAt": {
+    "$date": "2025-01-19T11:02:09.312Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T11:02:09.312Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d752b5522a2ec10d2aadb"
+  },
+  "fullName": "elsa hm ",
+  "email": "elsa@gmail.com",
+  "password": "$2b$10$SLVWuKi.o41f31xJI3Khcu4Kp9PtVjhD/wYHHYrcJJtC3kEmae2TC",
+  "roleId": "678d5d5df75d6cc86f8d4dc0",
+  "userType": "cms",
+  "createdAt": {
+    "$date": "2025-01-19T21:56:59.339Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T21:56:59.339Z"
+  },
+  "__v": 0
+}]

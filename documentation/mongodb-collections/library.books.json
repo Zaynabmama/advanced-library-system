@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "678f69fe8687a0ae8a1efe9b"
+  },
+  "title": "abc",
+  "genre": "abc",
+  "isbn": "978-3-16-1484789",
+  "description": "A captivating .",
+  "isOpenForReview": true,
+  "minAgeRequirement": 12,
+  "pdfUrl": "/uploads/pdfs/EBD-Second Assignment - Advanced Library System-100125-104536 (1).pdf",
+  "coverImageUrl": "/uploads/images/download.jpeg",
+  "totalCopies": 100,
+  "createdAt": {
+    "$date": "2025-01-21T09:33:50.719Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-21T09:33:50.719Z"
+  },
+  "__v": 0
+}]

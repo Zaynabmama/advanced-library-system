@@ -1,0 +1,62 @@
+[{
+  "_id": {
+    "$oid": "678cd889603866d1f746bd8f"
+  },
+  "name": "Admin",
+  "permissions": [
+    "*"
+  ],
+  "createdAt": {
+    "$date": "2025-01-19T10:48:41.260Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T10:48:41.260Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d5d5df75d6cc86f8d4dc0"
+  },
+  "name": "Editor",
+  "permissions": [
+    "manage_bookes"
+  ],
+  "createdAt": {
+    "$date": "2025-01-19T20:15:25.304Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T20:15:25.304Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d5d5df75d6cc86f8d4dc1"
+  },
+  "name": "Viewer",
+  "permissions": [
+    "view_dashboard",
+    "view_book_statistics"
+  ],
+  "createdAt": {
+    "$date": "2025-01-19T20:15:25.304Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T20:15:25.304Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "678d5d5df75d6cc86f8d4dc2"
+  },
+  "name": "Branch Manager",
+  "permissions": [
+    "manage_branches",
+    ""
+  ],
+  "createdAt": {
+    "$date": "2025-01-19T20:15:25.304Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T20:15:25.304Z"
+  }
+}]

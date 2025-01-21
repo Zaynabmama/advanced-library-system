@@ -1,0 +1,163 @@
+[{
+  "_id": {
+    "$oid": "678d48f63374e5c2f87c6cc0"
+  },
+  "name": {
+    "en": "Alice Smith",
+    "ar": "أليس سميث"
+  },
+  "email": "alice@gmail.com",
+  "biography": {
+    "ar": "أليس كاتبة خيال",
+    "en": "Alice is a fiction writer."
+  },
+  "profileImageUrl": "/uploads/images/download.jpeg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-19T18:48:22.458Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T18:48:22.600Z"
+  },
+  "__v": 0,
+  "pinCode": "$2b$10$cb4G5J/SKafLk5IOJdhD4u0R66hF8gUVMDGKZ5KZEH3l6W.MjEZ3S"
+},
+{
+  "_id": {
+    "$oid": "678d7af8e4d224250fce14b1"
+  },
+  "name": {
+    "en": "elissa",
+    "ar": "اليسا"
+  },
+  "email": "elissa@gmail.com",
+  "biography": {
+    "ar": "أليس كاتبة",
+    "en": "elissa is a fiction writer."
+  },
+  "profileImageUrl": "/uploads/images/download.jpeg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-19T22:21:44.346Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-19T22:21:44.543Z"
+  },
+  "__v": 0,
+  "pinCode": "$2b$10$zDUbRxCrbjX2fb25lBENfuEo1omqj3TskfXIojok2.Te6JPWJwSM."
+},
+{
+  "_id": {
+    "$oid": "678eb1a0cc33e81e71aa9339"
+  },
+  "name": {
+    "en": "Bob Johnson",
+    "ar": "بوب جونسون"
+  },
+  "email": "bob@gmail.com",
+  "biography": {
+    "ar": "بوب كاتب روايات بوليسية",
+    "en": "Bob writes mystery novels."
+  },
+  "profileImageUrl": "/uploads/images/bob.jpg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "pinCode": "$2b$10$abc123/SKafLk5IOJdhD4u0R66hF8gUVMDGKZ5KZEH3l6W.MjEZ3S"
+},
+{
+  "_id": {
+    "$oid": "678eb1a0cc33e81e71aa933a"
+  },
+  "name": {
+    "en": "Cathy Lee",
+    "ar": "كاثي لي"
+  },
+  "email": "cathy@gmail.com",
+  "biography": {
+    "ar": "كاثي كاتبة أطفال",
+    "en": "Cathy writes children's books."
+  },
+  "profileImageUrl": "/uploads/images/cathy.jpg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "pinCode": "$2b$10$xyz789/SKafLk5IOJdhD4u0R66hF8gUVMDGKZ5KZEH3l6W.MjEZ3S"
+},
+{
+  "_id": {
+    "$oid": "678eb1a0cc33e81e71aa933b"
+  },
+  "name": {
+    "en": "David Warner",
+    "ar": "ديفيد وارنر"
+  },
+  "email": "david@gmail.com",
+  "biography": {
+    "ar": "ديفيد كاتب سيرة ذاتية",
+    "en": "David writes biographies."
+  },
+  "profileImageUrl": "/uploads/images/david.jpg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "pinCode": "$2b$10$pqr456/SKafLk5IOJdhD4u0R66hF8gUVMDGKZ5KZEH3l6W.MjEZ3S"
+},
+{
+  "_id": {
+    "$oid": "678eb1a0cc33e81e71aa933c"
+  },
+  "name": {
+    "en": "Emily Davis",
+    "ar": "إميلي ديفيس"
+  },
+  "email": "emily@gmail.com",
+  "biography": {
+    "ar": "إميلي كاتبة رومانسية",
+    "en": "Emily writes romance novels."
+  },
+  "profileImageUrl": "/uploads/images/emily.jpg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "pinCode": "$2b$10$lmn234/SKafLk5IOJdhD4u0R66hF8gUVMDGKZ5KZEH3l6W.MjEZ3S"
+},
+{
+  "_id": {
+    "$oid": "678eb1a0cc33e81e71aa933d"
+  },
+  "name": {
+    "en": "Franklin Moss",
+    "ar": "فرانكلين موس"
+  },
+  "email": "franklin@gmail.com",
+  "biography": {
+    "ar": "فرانكلين كاتب خيال علمي",
+    "en": "Franklin writes sci-fi novels."
+  },
+  "profileImageUrl": "/uploads/images/franklin.jpg",
+  "userType": "author",
+  "createdAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-20T20:27:12.470Z"
+  },
+  "pinCode": "$2b$10$uvw567/SKafLk5IOJdhD4u0R66hF8gUVMDGKZ5KZEH3l6W.MjEZ3S"
+}]

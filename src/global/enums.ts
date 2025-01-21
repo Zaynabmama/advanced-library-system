@@ -10,16 +10,16 @@ export enum Language {
 }
 
 export enum PermissionsEnum {
-  ADD_BOOK = 'add_book',
-  UPDATE_BOOK = 'update_book',
-  DELETE_BOOK = 'delete_book',
-  PUBLISH_BOOK = 'publish_book',
-  UNPUBLISH_BOOK = 'unpublish_book',
-  APPROVE_BOOK_REQUEST = 'approve_book_request',
-  REJECT_BOOK_REQUEST = 'reject_book_request',
+  MANAGE_BOOKS = 'manage_bookes',
+  // UPDATE_BOOK = 'update_book',
+  // DELETE_BOOK = 'delete_book',
+  // PUBLISH_BOOK = 'publish_book',
+  // UNPUBLISH_BOOK = 'unpublish_book',
+  // APPROVE_BOOK_REQUEST = 'approve_book_request',
+  // REJECT_BOOK_REQUEST = 'reject_book_request',
 
   
-  PAGINATE_BOOKS = 'paginate_books', 
+  // PAGINATE_BOOKS = 'paginate_books', 
 
 
   ADD_AUTHOR = 'add_author', 

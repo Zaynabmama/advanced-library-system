@@ -11,9 +11,22 @@ export class Branch {
   @Prop({ required: true })
   address: string;
 
-  @Prop({ type: [{ bookId: { type: Types.ObjectId, ref: 'Book' }, availableCopies: Number }], default: [] })
-  inventory: { bookId: Types.ObjectId; availableCopies: number }[];
-
+  @Prop({
+    type: [
+      {
+        bookId: { type: Types.ObjectId, ref: 'Book' },
+        availableCopies: Number,
+        borrowableDays: Number,
+      },
+    ],
+    default: [],
+  })
+  inventory: {
+    bookId: Types.ObjectId;
+    availableCopies: number;
+    borrowableDays?: number;
+  }[];
+  
   @Prop({ default: 0 })
   totalBooks: number;
 

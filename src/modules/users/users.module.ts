@@ -13,6 +13,7 @@ import { Role, RoleSchema } from './schemas/role.schema';
 import { Otp, OtpSchema } from './schemas/otp.schema';
 import { PermissionsGuard } from 'src/global/guard/permissions.guard';
 import { RolesController } from './controllers/roles.controller';
+import { BookModule } from '../book/book.module';
 //import { BooksModule } from '../books/books.module';
 
 @Module({
@@ -25,6 +26,7 @@ import { RolesController } from './controllers/roles.controller';
       { name: Otp.name, schema: OtpSchema },
 
     ]),
+    BookModule,
    //BooksModule,
   ],
   controllers: [

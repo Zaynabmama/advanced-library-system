@@ -23,6 +23,7 @@ export class Member {
 
   @Prop({ type: [{ type: Types.ObjectId, ref: 'BorrowHistory' }] })
   borrowHistory: Types.ObjectId[];
+  
 
 
   @Prop({ required: true, enum: UserType, default: UserType.Member })

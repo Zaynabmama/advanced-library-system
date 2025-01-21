@@ -15,6 +15,7 @@ export const Messages = {
     BRANCH_INVENTORY_UPDATED:'Branch inventory updated',
     BRANCH_DELETED:'branch deleted',
     BOOK_CREATED:'Book Created Successfly',
+    REQUEST_CREATED:'request Created Successfly',
     BOOK_UPDATED:'Branch inventory updated'
 };
   

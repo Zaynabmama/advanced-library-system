@@ -11,6 +11,10 @@ import { GlobalModule } from './global/global.module';
 //import { BooksModule } from './modules/books/books.module';
 import { ReviewsModule } from './modules/reviews/reviews.module';
 import { BranchModule } from './modules/branches/branches.module';
+import { BookRequestsModule } from './modules/book-requests/book-requests.module';
+
+import { BookModule } from './modules/book/book.module';
+import { BorrowHistoryModule } from './modules/borrow-history/borrow-history.module';
 
 @Module({
   imports: [
@@ -33,6 +37,11 @@ import { BranchModule } from './modules/branches/branches.module';
     //BooksModule,
     ReviewsModule,
     BranchModule,
+    BookRequestsModule,
+ 
+    BookModule,
+ 
+    BorrowHistoryModule,
    
   ],
   providers: [

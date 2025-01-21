@@ -1,11 +1,15 @@
 import { IsNotEmpty, IsMongoId, IsNumber } from 'class-validator';
 
-export class UpdateInventoryDto {
+export class DistributeBookDto {
   @IsNotEmpty()
   @IsMongoId()
   bookId: string;
 
   @IsNotEmpty()
   @IsNumber()
-  delta: number; 
+  numberOfCopies: number;
+
+  @IsNotEmpty()
+  @IsNumber()
+  borrowableDays: number;
 }

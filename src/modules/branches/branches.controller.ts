@@ -1,6 +1,6 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Put, Query, UseGuards } from '@nestjs/common';
 import { BranchService } from './branches.service';
-import { UpdateInventoryDto } from './dtos/update-inventory.dto';
+import { DistributeBookDto } from './dtos/update-inventory.dto';
 import { Permissions } from 'src/global/decorators/permissions.decorator';
 import { PermissionsEnum } from 'src/global/enums';
 import { Public } from 'src/global/decorators/public.decorator';
@@ -32,14 +32,14 @@ export class BranchesController {
     return branches;
   }
 
-  @Put(':id/inventory')
+  @Patch(':id/distribute-books')
   @Permissions(PermissionsEnum.MANAGE_BRANCHES)
-  async updateInventory(
+  async distributeBooks(
     @Param('id') branchId: string,
-    @Body() updateInventoryDto: UpdateInventoryDto,
+    @Body() distributeBookDto: DistributeBookDto,
   ) {
-    await this.branchService.updateInventory(branchId, updateInventoryDto);
-    return { message: Messages.BRANCH_INVENTORY_UPDATED };
+    await this.branchService.distributeBooks(branchId, distributeBookDto);
+    return { message: 'Books distributed successfully' };
   }
 
   @Delete(':id')

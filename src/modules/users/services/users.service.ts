@@ -7,6 +7,7 @@ import {
   Injectable,
   UnauthorizedException,
   NotFoundException,
+  BadRequestException,
 } from '@nestjs/common';
 import { UserType } from 'src/global/enums';
 import { Author } from '../schemas/author.schema';
@@ -16,6 +17,7 @@ import { Role } from '../schemas/role.schema';
 import { EmailService } from 'src/global/services/email.service';
 import { ErrorMessages } from 'src/global/errors/errors';
 import { UploadService } from 'src/global/services/upload.service';
+import { BookService } from 'src/modules/book/book.service';
 
 @Injectable()
 export class UsersService {
@@ -25,6 +27,7 @@ export class UsersService {
     @InjectModel(CmsUser.name) private cmsUserModel: Model<CmsUser>,
     @InjectModel(Role.name) private roleModel: Model<Role>,
     private readonly emailService: EmailService,
+    private readonly bookService: BookService,
     private readonly uploadService: UploadService,
   ) {}
 
@@ -166,5 +169,32 @@ export class UsersService {
     return Math.random().toString(36).slice(-8);
   }
 
-  
+  async validateMemberForBorrowing(memberId: string, bookId: string): Promise<Member> {
+    const member = await this.memberModel.findById(memberId);
+
+    const memberAge = this.calculateAge(member.birthDate);
+
+    if (member.returnRate < 30) {
+      throw new BadRequestException('Member return rate is below the required threshold.');
+    }
+
+    return member;
+  }
+
+  async penalizeMember(memberId: string): Promise<void> {
+    const member = await this.memberModel.findById(memberId);
+    member.returnRate = Math.max(member.returnRate - 10, 0);
+    await member.save();
+  }
+
+  private calculateAge(birthDate: Date): number {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    return age;
+  }
 }
